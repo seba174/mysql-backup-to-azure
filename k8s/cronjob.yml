@@ -5,7 +5,7 @@ metadata:
   labels:
     app: mysql-backup
 spec:
-  schedule: '0 0 * * *'
+  schedule: "0 0 * * *"
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
   jobTemplate:
@@ -21,6 +21,11 @@ spec:
                     secretKeyRef:
                       name: mysql-backup
                       key: host
+                - name: mysql_port
+                  valueFrom:
+                    secretKeyRef:
+                      name: mysql-backup
+                      key: port
                 - name: mysql_user
                   valueFrom:
                     secretKeyRef:
@@ -63,4 +68,4 @@ spec:
                       key: container
 
           restartPolicy: Never
-      backoffLimit: 4
+      backoffLimit: 1

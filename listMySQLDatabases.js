@@ -1,24 +1,24 @@
 module.exports = async function () {
-  const { Pool, Client } = require('@mysql.js/mysql')
+  const { Client } = require("@mysql.js/mysql");
 
-  const client = new Client({ ...require('./config/config.js').mysql })
-  const { results, fields } = await client.query('show databases')
-  await client.end()
+  const client = new Client({ ...require("./config/config.js").mysql });
+  const { results } = await client.query("show databases");
+  await client.end();
 
-  return await results
-    .filter(result => {
+  return results
+    .filter((result) => {
       if (
-        result.Database != 'information_schema' &&
-        result.Database != 'sys' &&
-        result.Database != 'performance_schema' &&
-        result.Database != 'mysql'
+        result.Database != "information_schema" &&
+        result.Database != "sys" &&
+        result.Database != "performance_schema" &&
+        result.Database != "mysql"
       ) {
-        return result
+        return result;
       }
     })
-    .map(result => {
-      return result.Database
-    })
+    .map((result) => {
+      return result.Database;
+    });
 
   //connection.connect()
-}
+};

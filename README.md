@@ -1,7 +1,5 @@
 Docker container to backup MySQL databases direct to Azure Blob Storage.
 
-Blog: https://blog.adamhancock.co.uk/backing-up-mysql-to-azure/
-
 # Run with docker
 
 Run the below command as a cronjob with your desired backup interval. Update the environment variables to your server details.
@@ -10,13 +8,14 @@ Run the below command as a cronjob with your desired backup interval. Update the
 
 # To deploy on Kubernetes
 
-- Copy YAML: https://github.com/adamhancock/mysql-backup-to-azure/tree/master/k8s
+- Copy YAML: https://github.com/seba174/mysql-backup-to-azure/tree/master/k8s
 - Replace values in secrets.yaml.example with your MySQL and Azure Blob storage details.
 - `kubectl apply -f cronjob.yml -f secrets.yml`
 
 # Environment Variables
 
 - mysql_host=
+- mysql_port=3306
 - mysql_user=root
 - mysql_password=
 - azure_account=<myaccount>
