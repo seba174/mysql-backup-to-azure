@@ -6,6 +6,7 @@ const config = require("./config/config");
 const Cryptr = require("cryptr");
 const { deflate } = require("zlib");
 const { promisify } = require("util");
+
 const do_gzip = promisify(deflate);
 
 (async function () {

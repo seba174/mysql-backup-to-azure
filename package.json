@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
-    "start": "NODE_ENV=production node index.js"
+    "start": "NODE_ENV=production node index.js",
+    "decrypt": "node decrypt.js"
   },
   "author": "seba174",
   "license": "MIT",

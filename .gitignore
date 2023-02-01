@@ -2,3 +2,5 @@
 node_modules
 configmap.yml
 k8s/secrets.yml
+decrypt_config.json
+backup.sql

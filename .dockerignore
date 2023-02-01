@@ -1,3 +1,5 @@
 node_modules
 .env
 k8s
+decrypt_config.json
+backup.sql
