@@ -26,6 +26,7 @@ const do_unzip = promisify(unzip);
 
     writeFileSync(config.resultFileName, file);
   } catch (err) {
+    console.error(`Failed to decrypt file '${config.inputFileName}'`);
     console.error(err);
   }
 })();
