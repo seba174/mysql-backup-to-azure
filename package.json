@@ -11,10 +11,10 @@
   "author": "seba174",
   "license": "MIT",
   "dependencies": {
-    "@azure/storage-blob": "^12.12.0",
+    "@azure/storage-blob": "^12.14.0",
     "@mysql.js/mysql": "^0.8.0",
-    "cryptr": "^6.1.0",
-    "dotenv": "^16.0.3",
+    "cryptr": "^6.2.0",
+    "dotenv": "^16.1.4",
     "moment": "^2.29.4",
     "mysql": "^2.18.1",
     "mysqldump": "^3.2.0"
